@@ -9,4 +9,4 @@ Instruction:
 
 <img align=center src="https://i.imgur.com/u7dSIh6.png"/>
 
-[![Watch the video](https://i.imgur.com/OGIBdyc.png)](https://youtu.be/H9PxEjbKIXE)
+[![Watch the video]()](https://youtu.be/H9PxEjbKIXE)
