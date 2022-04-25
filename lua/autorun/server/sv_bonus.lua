@@ -11,11 +11,12 @@ end
 net.Receive('GiveBonus', function(len, ply)
     local data = net.ReadString()
     local amount = math.random(bonus.moneyAmount.minAmount, bonus.moneyAmount.maxAmount)
+    local existPlayer = sql.QueryValue('SELECT * FROM bonusPlayers WHERE steamID = "' .. data .. '"')
 
-    if (!file.IsDir('bonus/'..ply:SteamID64(), 'DATA')) then
-        file.CreateDir('bonus/'..ply:SteamID64())
-        ply:addMoney(amount)
+    if (!existPlayer) then
+        sql.Query('INSERT INTO bonusPlayers VALUES("' .. data .. '", "' .. amount .. '")')
         ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['youRecieve'] .. amount .. GAMEMODE.Config.currency)
+        ply:addMoney(amount)
     else
         ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['alreadyHaveBonus'])
     end
