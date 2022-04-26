@@ -1,11 +1,8 @@
-local ply = LocalPlayer()
-
 net.Receive('OpenMenu', function()
-    -- screen width && height
+    local ply = LocalPlayer()
     local width = ScrW() / 2
     local height = ScrH() / 2
 
-    -- localization
     local localization = bonus.localization
     local language = bonus.language
 
@@ -44,7 +41,7 @@ net.Receive('OpenMenu', function()
         givebonus.Paint = function(self, w, h)
             if self:IsHovered() then
                 draw.RoundedBox(5, 0, 0, w, h, Color(65, 66, 144))
-                givebonus:SetTextColor(Color(255, 255, 255))
+                givebonus:SetTextColor(color_white)
             else 
                 draw.RoundedBox(5, 0, 0, w, h, Color(65, 66, 144, 200))
                 givebonus:SetTextColor(Color(255, 255, 255, 200))

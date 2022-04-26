@@ -15,8 +15,8 @@ net.Receive('GiveBonus', function(len, ply)
 
     if (!existPlayer) then
         sql.Query('INSERT INTO bonusPlayers VALUES("' .. data .. '", "' .. amount .. '")')
-        ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['youRecieve'] .. amount .. GAMEMODE.Config.currency)
         ply:addMoney(amount)
+        ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['youRecieve'] .. amount .. GAMEMODE.Config.currency)
     else
         ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['alreadyHaveBonus'])
     end

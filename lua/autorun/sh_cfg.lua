@@ -1,4 +1,5 @@
 bonus = bonus or {}
+
 bonus.language = 'en'
 
 bonus.moneyAmount = {
@@ -8,7 +9,6 @@ bonus.moneyAmount = {
 
 bonus.localization = {
     fromServerNotification = '[Bonus] ',
-
     ['ru'] = {
         menuMainTitle = 'Бонус',
         menuSubTitle = 'Получи свой бонус!',
@@ -19,7 +19,6 @@ bonus.localization = {
             youRecieve = 'Вы получили '
         }
     },
-    
     ['en'] = {
         menuMainTitle = 'Bonus',
         menuSubTitle = 'Get your bonus!',
