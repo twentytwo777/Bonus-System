@@ -14,5 +14,5 @@ if CLIENT then
 end
 
 hook.Add('Initialize', 'table_init', function()
-    sql.Query("CREATE TABLE IF NOT EXISTS bonusPlayers(steamID TEXT(255), bonusAmount TEXT(255))")
+    sql.Query("CREATE TABLE IF NOT EXISTS bonusPlayers(steamID TEXT, bonusAmount TEXT)")
 end)
