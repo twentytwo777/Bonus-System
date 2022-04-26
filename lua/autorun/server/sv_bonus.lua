@@ -10,6 +10,9 @@ end
 
 net.Receive('GiveBonus', function(len, ply)
     local data = net.ReadString()
+    if not data then return end
+
+    math.randomseed(os.time() + os.clock())
     local amount = math.random(bonus.moneyAmount.minAmount, bonus.moneyAmount.maxAmount)
     local existPlayer = sql.QueryValue('SELECT * FROM bonusPlayers WHERE steamID = "' .. data .. '"')
 
