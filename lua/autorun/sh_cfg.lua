@@ -1,6 +1,6 @@
 bonus = bonus or {}
 
-bonus.language = 'en'
+bonus.language = 'ru'
 
 bonus.moneyAmount = {
     minAmount = 5000,

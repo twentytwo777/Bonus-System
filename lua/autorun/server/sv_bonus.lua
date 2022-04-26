@@ -1,9 +1,6 @@
 util.AddNetworkString('GiveBonus')
 util.AddNetworkString('OpenMenu')
 
-local localization = bonus.localization
-local language = bonus.language
-
 local function bonusMenu(ply, text)
     if (string.Trim(string.lower(text)) == '!bonus') then
         net.Start('OpenMenu')
@@ -19,9 +16,9 @@ net.Receive('GiveBonus', function(len, ply)
     if (!existPlayer) then
         sql.Query('INSERT INTO bonusPlayers VALUES("' .. player .. '", "' .. amount .. '")')
         ply:addMoney(amount)
-        ply:ChatPrint(localization.fromServerNotification .. localization[language]['messageServer']['youRecieve'] .. amount .. GAMEMODE.Config.currency)
+        ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['youRecieve'] .. amount .. GAMEMODE.Config.currency)
     else
-        ply:ChatPrint(localization.fromServerNotification .. localization[language]['messageServer']['alreadyHaveBonus'])
+        ply:ChatPrint(bonus.localization.fromServerNotification .. bonus.localization[bonus.language]['messageServer']['alreadyHaveBonus'])
     end
 end)
 
