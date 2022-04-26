@@ -1,5 +1,4 @@
 net.Receive('OpenMenu', function()
-    local ply = LocalPlayer()
     local width = ScrW() / 2
     local height = ScrH() / 2
 
@@ -51,7 +50,6 @@ net.Receive('OpenMenu', function()
                 surface.PlaySound('garrysmod/save_load1.wav')
 
                 net.Start('GiveBonus')
-                    net.WriteString(ply:SteamID64())
                 net.SendToServer()
 
                 bonus:SetVisible(!bonus:IsVisible())
