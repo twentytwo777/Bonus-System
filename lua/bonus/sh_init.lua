@@ -33,3 +33,17 @@ BONUS.localization = {
         }
     }
 }
+
+BONUS.Pallete = {
+    bonusBackground = Color(0, 0, 0, 200),
+    bonusMenuBackground = Color(87, 88, 187, 210),
+    bonusMenuTop = Color(65, 66, 144, 200),
+    bonusSquares = Color(65, 66, 144, 200),
+
+    bonusColorText = Color(255, 255, 255),
+    bonusButton = Color(65, 66, 144),
+    bonusButtonHover = Color(65, 66, 144, 200),
+
+    bonusButtonClose = Color(142, 76, 118),
+    bonusButtonCloseHover = Color(159, 68, 111)
+}

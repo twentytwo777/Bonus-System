@@ -15,7 +15,7 @@ else
     resource.AddFile('resource/fonts/montserrat_semibold.ttf')
     resource.AddFile('resource/fonts/montserrat_extrabold.ttf')
 
-    resource.AddFile('resource/bonus-templates/present.png')
+    resource.AddFile('materials/bonus-templates/present.png')
 end
 
 hook.Add('Initialize', 'InitializeBonusDatabase', function()
