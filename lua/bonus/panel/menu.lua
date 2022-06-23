@@ -52,7 +52,7 @@ local function panelMainMenu()
     local bonus_img = vgui.Create('DImage', bonus)
     bonus_img:SetPos(5, 30)
     bonus_img:SetSize(170, 170)
-    bonus_img:SetImage('img/present.png')
+    bonus_img:SetImage('resource/bonus-templates/present.png')
 
     local givebonus = vgui.Create('DButton', bonus)
     givebonus:SetText(translation.Button)
